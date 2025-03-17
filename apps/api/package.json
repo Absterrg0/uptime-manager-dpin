@@ -1,0 +1,18 @@
+{
+  "name": "api",
+  "module": "index.ts",
+  "type": "module",
+  "dependencies": {
+    "@repo/db":"*",
+    "common":"*"
+
+  },
+  "devDependencies": {
+    "@repo/db":"*",
+    "common":"*",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
