@@ -1,12 +1,14 @@
-import  express  from "express";
 import type { Request,Response } from "express";
+import express from "express"
 import {prisma} from "@repo/db/client"
 import { authMiddleware } from "./middleware";
+import cors from "cors";
 const app = express();
 
 
 
 
+app.use(cors());
 app.use(express.json())
 
 app.post("/api/website",authMiddleware,async (req:Request,res:Response)=>{
@@ -145,5 +147,7 @@ app.delete("/api/website",authMiddleware, async (req:Request,res:Response)=>{
     }
 })
 
+console.log("Server running at http://localhost:8080")
 
-app.listen(3000);
+
+app.listen(8080);

@@ -3,13 +3,20 @@
   "module": "index.ts",
   "type": "module",
   "dependencies": {
-    "@repo/db":"*",
-    "common":"*"
-
+    "@repo/db": "*",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "common": "*",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "scripts": {
+    "dev": "bun src/index.ts"
   },
   "devDependencies": {
-    "@repo/db":"*",
-    "common":"*",
+    "@repo/db": "*",
+    "common": "*",
     "@types/bun": "latest"
   },
   "peerDependencies": {

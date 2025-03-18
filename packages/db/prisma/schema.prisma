@@ -53,7 +53,7 @@ model WebsiteTick{
 website   Website     @relation(fields: [websiteId],references: [id])
   createdAt DateTime
   status    WebsiteStatus
-  latency   Float?
+  latency   Int?
   disabled  Boolean   @default(false)
 }
 
