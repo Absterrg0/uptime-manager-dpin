@@ -2,34 +2,34 @@
 
 
 export interface SignupIncomingMessage{
-    ip:String,
-    publicKey:String,
-    signedMessagE:String,
-    callbackId:String
+    ip:string,
+    publicKey:string,
+    signedMessage:string,
+    callbackId:string
 }
 
 
 export interface ValidateIncomingMessage{
-    callbackId:String,
-    signedMessage:String,
+    callbackId:string,
+    signedMessage:string,
     status:"Good" | "Bad",
-    latency:Number,
-    websiteId:String,
-    validatorId:String,
+    latency:number,
+    websiteId:string,
+    validatorId:string,
 
 }
 
 
 export interface SignupOutgoingMessage{
-    validatorId:String,
-    callbackId:String
+    validatorId:string,
+    callbackId:string
 }
 
 
 export interface ValidateOutgoingMessage{
-    url:String,
-    callbackId:String,
-    websiteId:String,
+    url:string,
+    callbackId:string,
+    websiteId:string,
 }
 
 

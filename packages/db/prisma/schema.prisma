@@ -40,7 +40,8 @@ model Validator{
   publicKey String
   location  String
   ipAddress String
-  ticksByMe    WebsiteTick[]
+  pendingAmount Int @default(0)
+  ticks    WebsiteTick[]
 }
 
 
@@ -51,7 +52,7 @@ model WebsiteTick{
   validatorId String
   validator Validator @relation(fields: [validatorId],references: [id])
 website   Website     @relation(fields: [websiteId],references: [id])
-  createdAt DateTime
+  createdAt DateTime      @default(now())
   status    WebsiteStatus
   latency   Int?
   disabled  Boolean   @default(false)
